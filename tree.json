@@ -1,0 +1,48 @@
+{
+    "id": 1,
+    "label": "a",
+    "nested": [
+      {
+        "id": 2,
+        "label": "B",
+        "nested": [
+          {
+            "id": 5,
+            "label": "E",
+            "nested":[]
+          },
+          {
+            "id": 6,
+            "label": "F",
+            "nested":[]
+          },
+          {
+            "id": 7,
+            "label": "G",
+            "nested":[]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "nested":[]
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "nested": [
+          {
+            "id": 8,
+            "label": "H",
+            "nested":[]
+          },
+          {
+            "id": 9,
+            "label": "I",
+            "nested":[]
+          }
+        ]
+      }
+    ]
+  }

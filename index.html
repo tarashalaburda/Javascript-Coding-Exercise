@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Coding Exercise</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="test.js"></script>
+</head>
+<body onload='document.form1.text1.focus()'>
+
+    <div class="bg-fon"></div>
+
+    <form action="#" method="post" id="myForm" name="form1">
+        <h3>Contact Form</h3>
+        <div>
+            <label for="">Name</label>
+            <input type="text" name="text1" required min="1" max="100">
+        </div> 
+        <div>
+            <label for="">Address 1</label>
+            <input type="text" name="addres1" required min="1" max="100">
+        </div>
+        <div>
+            <label for="">Address 2</label>
+            <input type="text" name="addres2" min="0" max="100">
+        </div>
+        <div>
+            <label for="">City</label>
+            <input type="text" name="city" required min="1" max="50">
+        </div>
+        <div>
+            <label for="">State</label>
+            <select name="state"  required pattern="[A-Za-z]+" min="2" max="2">
+                <option></option>
+                <option value="US-WA">State of Washington</option>
+                <option value="US-CA">State of California</option>
+                <option value="US-NY">State of New York</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Zip Code</label>
+            <input id="n-only" type="text" name="zipcode" required min="5" max="5">
+            <p class="rq">*Enter numbers only.</p>
+        </div>
+        <div>
+            <button class="btn" type="submit" name="submit" value="Submit" onclick="allLetter(document.form1.text1); validate(this.form);">Ok</button>
+            <button onclick="myFunction()">Cancel</button>
+         </div>
+        
+    </form>
+    
+<script>
+    document.getElementById("n-only").onkeypress= function(event){
+    event= event || window.event;
+    if (event.charCode && (event.charCode < 48 || event.charCode > 57))//  User can press backspace, enter, back arrow
+     return false;
+    };
+</script>
+
+
+</body>
+</html>
